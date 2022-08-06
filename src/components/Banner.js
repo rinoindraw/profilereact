@@ -1,16 +1,15 @@
 import { Container, Col, Row } from "react-bootstrap"
 import { useState, useEffect } from "react";
-import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import pasFoto from '../assets/img/pasfoto2-01.png';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = [ "FrontEnd Developer", "Graphic Designer", "UX Designer" ];
     const [text, setText] = useState('');
-    // const [index, setIndex] = useState(1);
     const [index, setIndex] = useState(1);
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
@@ -67,7 +66,7 @@ export const Banner = () => {
                       <TrackVisibility>
                         {({ isVisible }) =>
                         <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                          <img src={headerImg} alt="Header Img"/>
+                          <img src={pasFoto} alt="PasFoto"/>
                         </div>}
                       </TrackVisibility>
                     </Col>
